@@ -1,4 +1,3 @@
-import BlogList from '@/components/BlogList'
 import Navbar from '@/components/Navbar'
 import React from 'react'
 
