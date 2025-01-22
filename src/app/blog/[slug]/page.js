@@ -29,18 +29,4 @@ const page = async ({ params }) => {
     );
 };
 
-export async function generateStaticParams() {
-    const entries = await client.getEntries({
-        content_type: 'blogPost',
-    });
-
-    const paths = entries.items.map((item) => ({
-        slug: item.fields.slug,
-    }));
-
-    return paths.map((path) => ({
-        params: path,
-    }));
-}
-
 export default page;

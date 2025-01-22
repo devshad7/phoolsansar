@@ -11,7 +11,7 @@ const BreadCrumb = ({ post }) => {
                     </BreadcrumbItem>
                     <BreadcrumbSeparator />
                     <BreadcrumbItem>
-                        <BreadcrumbPage>{post.fields.title.substring(0, 30)}...</BreadcrumbPage>
+                        <BreadcrumbPage>{post}...</BreadcrumbPage>
                     </BreadcrumbItem>
                 </BreadcrumbList>
             </Breadcrumb >

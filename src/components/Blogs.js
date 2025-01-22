@@ -19,7 +19,7 @@ const Blogs = () => {
 
     async function getPosts() {
         try {
-            const entries = await client.getEntries({ content_type: 'blogPost' });
+            const entries = await client.getEntries({ content_type: 'blogPost', limit: 4 });
             setPosts(entries.items);
 
         } catch (error) {

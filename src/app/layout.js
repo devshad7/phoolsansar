@@ -1,3 +1,4 @@
+import { Toaster } from "react-hot-toast";
 import "./globals.css";
 
 export const metadata = {
@@ -9,6 +10,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className="text-primary-text bg-primary-bg" suppressHydrationWarning>
+        <Toaster />
         {children}
       </body>
     </html>

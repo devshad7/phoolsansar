@@ -7,11 +7,14 @@ import { options } from '@/utils/richTextType'
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer'
 import HomeAbout from './HomeAbout'
 import { Facebook, Instagram, Linkedin, X } from 'lucide-react'
+import toast from 'react-hot-toast'
 
 const Blog = ({ post }) => {
 
     const [scrollProgress, setScrollProgress] = useState(0);
     const contentRef = useRef(null);
+
+    const currentUrl = window.location.href
 
     useEffect(() => {
         const handleScroll = () => {
@@ -40,7 +43,7 @@ const Blog = ({ post }) => {
         <>
             <div className="2xl:max-w-[95rem] mx-auto px-5 md:px-28 py-10 md:py-8">
                 <div className="flex flex-col items-center">
-                    <BreadCrumb post={post} />
+                    <BreadCrumb post={post.fields.title.substring(0, 30)} />
                     <div className="mt-5 text-center">
                         <span className='text-sm font-semibold text-gray-500'><Link href={''} className='text-indigo-500'>{post.fields.author}</Link> on
                             {' ' + new Date(post.fields.date).toLocaleDateString('en-US', {
@@ -74,7 +77,7 @@ const Blog = ({ post }) => {
                                             6 min
                                         </span>
                                     </div>
-                                    <div className="flex flex-col items-center gap-5">
+                                    <div className="flex flex-col items-center gap-6">
                                         <Link href={''} className='hover:text-indigo-500'>
                                             <X />
                                         </Link>
@@ -87,6 +90,12 @@ const Blog = ({ post }) => {
                                         <Link href={''} className='hover:text-indigo-500'>
                                             <Linkedin />
                                         </Link>
+                                        <div className='hover:text-indigo-500 cursor-pointer' onClick={() => navigator.clipboard.writeText(currentUrl).then(toast.success('Copied'))}>
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-link">
+                                                <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71" />
+                                                <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71" />
+                                            </svg>
+                                        </div>
                                     </div>
                                 </div>
                             </div>

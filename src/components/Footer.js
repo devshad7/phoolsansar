@@ -32,16 +32,16 @@ const Footer = () => {
                         <div className="">
                             <span className='text-gray-500 font-semibold'>Categories</span>
                             <div className="flex flex-col font-semibold gap-2 mt-4">
-                                <Link href={''} className='hover:underline'>
+                                <Link href={'/category/technology'} className='hover:underline'>
                                     Technology
                                 </Link>
-                                <Link href={''} className='hover:underline'>
+                                <Link href={'/category/travel'} className='hover:underline'>
                                     Travel
                                 </Link>
-                                <Link href={''} className='hover:underline'>
+                                <Link href={'/category/sport'} className='hover:underline'>
                                     Sport
                                 </Link>
-                                <Link href={''} className='hover:underline'>
+                                <Link href={'/category/business'} className='hover:underline'>
                                     Business
                                 </Link>
                             </div>
@@ -49,7 +49,7 @@ const Footer = () => {
                         <div className="">
                             <span className='text-gray-500 font-semibold'>Support</span>
                             <div className="flex flex-col font-semibold gap-2 mt-4">
-                                <Link href={''} className='hover:underline'>
+                                <Link href={'mailto:ezaz.raza@gmail.com'} className='hover:underline'>
                                     Email
                                 </Link>
                                 <Link href={''} className='hover:underline'>
@@ -66,13 +66,13 @@ const Footer = () => {
                         <div className="">
                             <span className='text-gray-500 font-semibold'>Quick Links</span>
                             <div className="flex flex-col font-semibold gap-2 mt-4">
-                                <Link href={''} className='hover:underline'>
+                                <Link href={'/trending'} className='hover:underline'>
                                     Trending
                                 </Link>
-                                <Link href={''} className='hover:underline'>
+                                <Link href={'/stories'} className='hover:underline'>
                                     Stories
                                 </Link>
-                                <Link href={''} className='hover:underline'>
+                                <Link href={'/news'} className='hover:underline'>
                                     News
                                 </Link>
                             </div>
