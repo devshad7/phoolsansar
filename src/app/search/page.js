@@ -3,17 +3,19 @@
 import Navbar from '@/components/Navbar'
 import SearchResult from '@/components/SearchResult'
 import { useSearchParams } from 'next/navigation'
-import React from 'react'
+import React, { Suspense } from 'react'
 
 function page() {
 
-    const searchParam = useSearchParams()
-    const q = searchParam.get('q')
+  const searchParam = useSearchParams()
+  const q = searchParam.get('q')
 
   return (
     <>
-    <Navbar />
-    <SearchResult query={q} />
+      <Navbar />
+      <Suspense fallback={<div>Loading search results...</div>}>
+        <SearchResult query={q} />
+      </Suspense>
     </>
   )
 }
