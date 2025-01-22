@@ -1,7 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
     images: {
-        domains: ['images.ctfassets.net'], // Add your Contentful image domain here
+        domains: ['images.ctfassets.net'],
     },
     eslint: {
         ignoreDuringBuilds: true,

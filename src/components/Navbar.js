@@ -35,9 +35,11 @@ const Navbar = () => {
                     </div>
                     <div className="flex items-center gap-6 md:gap-10">
                         <Search />
-                        <Button className='customBtn px-5 rounded-lg font-semibold md:block hidden'>
-                            Contact
-                        </Button>
+                        <Link href={'/contact'}>
+                            <Button className='customBtn px-5 rounded-lg font-semibold md:block hidden'>
+                                Contact
+                            </Button>
+                        </Link>
                         <div className="md:hidden flex justify-center items-center">
                             <DropdownMenu>
                                 <DropdownMenuTrigger className='focus:outline-none'><Menu /></DropdownMenuTrigger>
