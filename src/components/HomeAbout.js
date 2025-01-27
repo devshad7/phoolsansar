@@ -1,5 +1,5 @@
 import React from 'react'
-import { Facebook, Instagram, Linkedin, MapPin, X } from 'lucide-react'
+import { Facebook, Instagram, Linkedin, MapPin, UserRound, X } from 'lucide-react'
 import Link from 'next/link'
 import HomeCarousel from './HomeCarousel'
 
@@ -10,14 +10,15 @@ const HomeAbout = () => {
                 <div className="p-8 rounded-2xl bg-white shadow-categories w-full">
                     <span className='text-xs uppercase font-bold text-gray-500'>About Author</span>
                     <div className="flex items-center gap-2 mt-3">
-                        <img src="/assets/blog1.webp" alt="" className='size-[50px] rounded-full' />
+                        {/* <img src="/assets/blog1.webp" alt="" className='size-[50px] rounded-full' /> */}
+                        <UserRound className='size-[35px] rounded-full' />
                         <div className="">
-                            <h1 className='md:text-lg font-bold'>Ethan Caldwell</h1>
-                            <p className='text-sm font-semibold text-gray-500'>Reflective Blogger</p>
+                            <h1 className='md:text-lg font-bold'>Ezaz Ahmed</h1>
+                            <p className='text-sm font-semibold text-gray-500'>Professional Lecturer</p>
                         </div>
                     </div>
                     <div className="mt-4">
-                        <p>Ethan Caldwell shares thoughtful insights and reflections on life, culture, and personal growth. His work explores the intersections of creativity and experience, offering readers unique perspectives.</p>
+                        <p>Ezaz Ahmed is a dedicated lecturer who inspires growth through education. Combining deep knowledge with clear communication, he empowers students with practical insights and real-world applications.</p>
                     </div>
                     <div className="flex items-center mt-3 gap-2 font-semibold">
                         <MapPin className='text-indigo-500' />
