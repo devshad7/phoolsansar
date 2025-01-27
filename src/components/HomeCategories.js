@@ -1,4 +1,4 @@
-import { Award, ChartColumnIncreasing, File, Flame, Laptop, Plane, Presentation, Wallet } from 'lucide-react'
+import { Award, ChartColumnIncreasing, File, FileQuestion, Flame, Flower, Laptop, Plane, Presentation, Wallet } from 'lucide-react'
 import Link from 'next/link'
 import React from 'react'
 
@@ -8,12 +8,12 @@ const HomeCategories = () => {
         <span className='text-xs uppercase font-bold text-gray-500 tracking-wider'>Explore Trending Topics</span>
         <div className="max-w-[940px] mx-auto flex flex-wrap justify-center gap-4 md:gap-5 mt-8">
             <Link href={'/category/technology'} className="py-3 px-5 bg-white shadow-categories hover:shadow-custom rounded-full font-bold flex justify-center items-center gap-2">
-                <Laptop color='#2472e4' />
-                <span>Technology</span>
+                <Flower color='#2472e4' />
+                <span>Gardening</span>
             </Link>
             <Link href={'/category/travel'} className="py-3 px-5 bg-white shadow-categories hover:shadow-custom rounded-full font-bold flex justify-center items-center gap-2">
-                <Plane color='#ed7528' />
-                <span>Travel</span>
+                <ChartColumnIncreasing color='#ed7528' />
+                <span>Share Market</span>
             </Link>
             <Link href={'/category/sport'} className="py-3 px-5 bg-white shadow-categories hover:shadow-custom rounded-full font-bold flex justify-center items-center gap-2">
                 <Award color='#009b51' />
@@ -24,16 +24,16 @@ const HomeCategories = () => {
                 <span>Business</span>
             </Link>
             <Link href={'/category/management'} className="py-3 px-5 bg-white shadow-categories hover:shadow-custom rounded-full font-bold flex justify-center items-center gap-2">
-                <ChartColumnIncreasing color='#e22572' />
-                <span>Management</span>
+                <FileQuestion color='#e22572' />
+                <span>World Facts</span>
             </Link>
             <Link href={'/trending'} className="py-3 px-5 bg-white shadow-categories hover:shadow-custom rounded-full font-bold flex justify-center items-center gap-2">
                 <Flame color='#e1411e' />
-                <span>Trends</span>
+                <span>Trending</span>
             </Link>
             <Link href={'/category/startup'} className="py-3 px-5 bg-white shadow-categories hover:shadow-custom rounded-full font-bold flex justify-center items-center gap-2">
                 <Presentation color='#595959' />
-                <span>Startups</span>
+                <span>Stories</span>
             </Link>
             <Link href={'/news'} className="py-3 px-5 bg-white shadow-categories hover:shadow-custom rounded-full font-bold flex justify-center items-center gap-2">
                 <File color='#17aeef' />

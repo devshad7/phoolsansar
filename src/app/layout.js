@@ -3,7 +3,7 @@ import "./globals.css";
 
 export const metadata = {
   title: "Phool Sansar | A World Of Blessing",
-  description: "Phool Sansar is a vibrant celebration of nature's beauty, offering a mesmerizing array of flowers and plants. From delicate blossoms to exotic arrangements, it’s a one-stop destination for flower enthusiasts, event decorators, and anyone who cherishes the magic of blooms.",
+  description: "Phool Sansar: A World of Nature, Trends, and Facts is your go-to platform for exploring the beauty of flowers, plants, and nature while staying updated on trending topics, stories, and market insights. Dive into a vibrant world where nature meets knowledge!",
 };
 
 export default function RootLayout({ children }) {

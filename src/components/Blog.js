@@ -74,7 +74,7 @@ const Blog = ({ post }) => {
                                             <circle cx="18" cy="18" r="16" fill="none" strokeWidth="2" strokeDasharray="100" strokeDashoffset={100 - scrollProgress} strokeLinecap="round" stroke="#4f46e5" />
                                         </svg>
                                         <span className="absolute text-sm font-bold">
-                                            6 min
+                                            {post.fields.readTime} min
                                         </span>
                                     </div>
                                     <div className="flex flex-col items-center gap-6">

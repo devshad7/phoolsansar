@@ -25,6 +25,8 @@ const HomeCarousel = () => {
             const res = entries.items.flatMap((e) => e.fields.posts)
             setPosts(res);
             setLoading(false)
+            // console.log(res);
+            
         } catch (error) {
             setError('Error fetching posts.');
             console.error("Error fetching entries:", error);
