@@ -29,6 +29,23 @@ const Footer = () => {
                         </div>
                     </div>
                     <div className="flex mt-8 md:mt-0 gap-10 md:gap-20">
+                    <div className="">
+                            <span className='text-gray-500 font-semibold'>Quick Links</span>
+                            <div className="flex flex-col font-semibold gap-2 mt-4">
+                                <Link href={'/trending'} className='hover:underline'>
+                                    Trending
+                                </Link>
+                                <Link href={'/stories'} className='hover:underline'>
+                                    Stories
+                                </Link>
+                                <Link href={'/news'} className='hover:underline'>
+                                    Privacy Policy
+                                </Link>
+                                <Link href={'/news'} className='hover:underline'>
+                                    Terms & Conditions
+                                </Link>
+                            </div>
+                        </div>
                         <div className="">
                             <span className='text-gray-500 font-semibold'>Categories</span>
                             <div className="flex flex-col font-semibold gap-2 mt-4">
@@ -60,20 +77,6 @@ const Footer = () => {
                                 </Link>
                                 <Link href={''} className='hover:underline'>
                                     Linkedin
-                                </Link>
-                            </div>
-                        </div>
-                        <div className="">
-                            <span className='text-gray-500 font-semibold'>Quick Links</span>
-                            <div className="flex flex-col font-semibold gap-2 mt-4">
-                                <Link href={'/trending'} className='hover:underline'>
-                                    Trending
-                                </Link>
-                                <Link href={'/stories'} className='hover:underline'>
-                                    Stories
-                                </Link>
-                                <Link href={'/news'} className='hover:underline'>
-                                    News
                                 </Link>
                             </div>
                         </div>
