@@ -47,7 +47,8 @@ const HomeCarousel = () => {
             {loading === false ? (
                 <div className="w-full h-[300px]">
                     <span className='text-xs uppercase font-semibold'>Featured Posts</span>
-                    <Carousel
+                    {posts.length > 0 ? (
+                        <Carousel
                         className='rounded-2xl pt-4 group'
                         plugins={[
                             Autoplay({
@@ -88,6 +89,12 @@ const HomeCarousel = () => {
                             <CarouselNext className='absolute -right-4' />
                         </div>
                     </Carousel>
+                    ) : (
+                        <>
+                        <br />
+                        <span>No Featured Post</span>
+                        </>
+                    )}
                 </div>
             ) : (
                 <FeaturedLoader />

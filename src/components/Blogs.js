@@ -93,7 +93,7 @@ const Blogs = () => {
                                 </Button>
                             </div>
                         ) : (
-                            <span></span>
+                            <span>No Post Found</span>
                         )}
                     </>
                 ) : (
