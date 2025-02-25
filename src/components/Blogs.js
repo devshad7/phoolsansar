@@ -24,6 +24,8 @@ const Blogs = () => {
             const entries = await client.getEntries({ content_type: 'blogPost', limit: 4 });
             setPosts(entries.items);
             setLoading(false)
+            console.log(entries.items);
+            
         } catch (error) {
             setError('Error fetching posts.');
             console.error("Error fetching entries:", error);

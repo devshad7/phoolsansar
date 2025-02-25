@@ -1,5 +1,5 @@
 import React from 'react'
-import { Facebook, Instagram, Linkedin, MapPin, UserRound, X } from 'lucide-react'
+import { Facebook, Instagram, Linkedin, MapPin, X } from 'lucide-react'
 import Link from 'next/link'
 import HomeCarousel from './HomeCarousel'
 
@@ -10,8 +10,7 @@ const HomeAbout = () => {
                 <div className="p-8 rounded-2xl bg-white shadow-categories w-full">
                     <span className='text-xs uppercase font-bold text-gray-500'>About Author</span>
                     <div className="flex items-center gap-2 mt-3">
-                        {/* <img src="/assets/blog1.webp" alt="" className='size-[50px] rounded-full' /> */}
-                        <UserRound className='size-[35px] rounded-full' />
+                        <img src="/assets/author.png" alt="" className='size-[50px] rounded-full bg-cover' />
                         <div className="">
                             <h1 className='md:text-lg font-bold'>Ezaz Ahmed</h1>
                             <p className='text-sm font-semibold text-gray-500'>Professional Lecturer</p>
