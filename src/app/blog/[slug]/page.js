@@ -52,7 +52,9 @@ export async function generateMetadata({ params }) {
     const { title, description, thumbnail, author, date } = post;
     const url = `https://phoolsansar.com/blog/${slug}`;
 
-    const imageUrl = thumbnail?.fields?.file?.url?.replace(/^https?:\/\/[^/]+/, '');
+    const imageUrl = thumbnail?.fields?.file?.url?.startsWith('https')
+        ? thumbnail.fields.file.url
+        : `https:${thumbnail.fields.file.url}`;
 
     return {
         metadataBase: new URL("https://phoolsansar.com"),
