@@ -12,9 +12,12 @@ import toast from 'react-hot-toast'
 const Blog = ({ post }) => {
 
     const [scrollProgress, setScrollProgress] = useState(0);
+    const [currentUrl, setCurrentUrl] = useState('');
     const contentRef = useRef(null);
 
-    const currentUrl = window.location.href
+    useEffect(() => {
+        setCurrentUrl(window.location.href)
+    }, [])
 
     useEffect(() => {
         const handleScroll = () => {

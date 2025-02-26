@@ -1,14 +1,20 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
     images: {
-        domains: ['images.ctfassets.net'],
+      remotePatterns: [
+        {
+          protocol: "https",
+          hostname: "images.ctfassets.net",
+        },
+      ],
     },
     eslint: {
-        ignoreDuringBuilds: true,
+      ignoreDuringBuilds: true,
     },
     typescript: {
-        ignoreBuildErrors: true,
-    }
-};
-
-export default nextConfig;
+      ignoreBuildErrors: true,
+    },
+  };
+  
+  export default nextConfig;
+  

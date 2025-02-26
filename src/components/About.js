@@ -1,7 +1,30 @@
+'use client'
+
+import { client } from '@/utils/contentful'
 import Image from 'next/image'
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 
 const About = () => {
+
+    const [assets, setAssets] = useState([]);
+    const [loading, setLoading] = useState(true);
+
+    useEffect(() => {
+        const fetchAssets = async () => {
+            try {
+                const response = await client.getAssets();
+                const filtered = response.items.filter((res) => res.fields.title === "Author");
+                setAssets(filtered);
+            } catch (error) {
+                console.error("Error fetching assets:", error);
+            } finally {
+                setLoading(false);
+            }
+        };
+
+        fetchAssets();
+    }, []);
+
     return (
         <>
             <div className="2xl:max-w-[95rem] mx-auto px-5 md:px-28 pt-2 md:pt-6">
@@ -10,15 +33,21 @@ const About = () => {
                         <h1 className='text-2xl md:text-3xl font-bold'>About Author</h1>
                         <p className='md:w-[420px] text-gray-500'>A detailed information about the author</p>
                     </div>
-                    <div className="mt-8 text-center">
-                        <Image
-                            src='/assets/author_banner.png'
-                            height={900}
-                            width={900}
-                            alt={'author_banner'}
-                            className='rounded-xl w-full max-w-[400px] md:max-w-full h-auto'
-                        />
-                    </div>
+                    {loading ? (
+                        <div className="mt-8 bg-gray-100 animate-pulse h-[220px] w-full max-w-[400px] md:w-full md:max-w-[960px] md:h-[400px] xl:h-[450px] rounded-xl"></div>
+                    ) : (
+                        assets.map((img) => (
+                            <div className="mt-8 text-center" key={img.sys.id}>
+                                <Image
+                                    src={`https:${img.fields.file.url}`}
+                                    height={900}
+                                    width={900}
+                                    alt={'author_banner'}
+                                    className='rounded-xl w-full max-w-[400px] md:max-w-full h-auto'
+                                />
+                            </div>
+                        ))
+                    )}
                     <div className="prose md:prose-lg xl:prose-lg 2xl:prose-base mx-auto mt-8 max-w-[95%] md:w-[70%]">
                         <p className='text-lg'><strong className='text-2xl italic text-violet-600'>Ezaz Ahmed </strong>
                             is a dedicated lecturer from <strong>Nautanwa</strong> <strong>, Uttar Pradesh</strong> who inspires growth through education. His commitment to nurturing young minds and fostering

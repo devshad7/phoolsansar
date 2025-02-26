@@ -33,7 +33,7 @@ export default page;
 
 // SEO
 export async function generateMetadata({ params }) {
-    const { slug } = params;
+    const { slug } = await params;
 
     const entries = await client.getEntries({
         content_type: 'blogPost',
@@ -52,7 +52,10 @@ export async function generateMetadata({ params }) {
     const { title, description, thumbnail, author, date } = post;
     const url = `https://phoolsansar.com/blog/${slug}`;
 
+    const imageUrl = thumbnail?.fields?.file?.url?.replace(/^https?:\/\/[^/]+/, '');
+
     return {
+        metadataBase: new URL("https://phoolsansar.com"),
         title,
         description,
         openGraph: {
@@ -62,7 +65,7 @@ export async function generateMetadata({ params }) {
             siteName: "Phool Sanar",
             images: [
                 {
-                    url: thumbnail?.fields?.file?.url,
+                    url: imageUrl,
                     width: 1200,
                     height: 630,
                     alt: title,
@@ -82,7 +85,7 @@ export async function generateMetadata({ params }) {
             card: "summary_large_image",
             title,
             description,
-            images: [thumbnail?.fields?.file?.url],
+            images: [imageUrl],
         },
         other: {
             "application/ld+json": JSON.stringify({
@@ -92,7 +95,7 @@ export async function generateMetadata({ params }) {
                 "description": description,
                 "author": { "@type": "Person", "name": author },
                 "datePublished": date,
-                "image": thumbnail?.fields?.file?.url,
+                "image": imageUrl,
                 "url": url,
                 "publisher": { "@type": "Organization", "name": "Phool Sansar" },
             }),

@@ -5,6 +5,7 @@ import Newsletter from '@/components/Newsletter'
 import React from 'react'
 
 export const metadata = {
+  metadataBase: new URL("https://phoolsansar.com"),
   title: "About Ezaz Ahmed - Educator & Mentor",
   description: "Ezaz Ahmed is a dedicated lecturer from Nautanwa, Uttar Pradesh, inspiring students through engaging education and mentorship.",
   keywords: ["Ezaz Ahmed", "Lecturer", "Education", "Teaching", "Nautanwa", "Holy Cross School Nautanwa", "Student Mentor", "Uttar Pradesh", "India"],
