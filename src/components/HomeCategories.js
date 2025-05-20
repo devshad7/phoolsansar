@@ -31,9 +31,9 @@ const HomeCategories = () => {
                 <Flame color='#e1411e' />
                 <span>Trending</span>
             </Link>
-            <Link href={'/category/startup'} className="py-3 px-5 bg-white shadow-categories hover:shadow-custom rounded-full font-bold flex justify-center items-center gap-2">
+            <Link href={'/category/stories'} className="py-3 px-5 bg-white shadow-categories hover:shadow-custom rounded-full font-bold flex justify-center items-center gap-2">
                 <Presentation color='#595959' />
-                <span>Stories</span>
+                <span>Web Stories</span>
             </Link>
             <Link href={'/news'} className="py-3 px-5 bg-white shadow-categories hover:shadow-custom rounded-full font-bold flex justify-center items-center gap-2">
                 <File color='#17aeef' />

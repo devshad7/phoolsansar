@@ -29,14 +29,17 @@ const Footer = () => {
                         </div>
                     </div>
                     <div className="flex mt-8 md:mt-0 gap-10 md:gap-20">
-                    <div className="">
+                        <div className="">
                             <span className='text-gray-500 font-semibold'>Quick Links</span>
                             <div className="flex flex-col font-semibold gap-2 mt-4">
                                 <Link href={'/trending'} className='hover:underline'>
-                                    Trending
+                                    Disclamer
                                 </Link>
                                 <Link href={'/stories'} className='hover:underline'>
-                                    Stories
+                                    Abouts Us
+                                </Link>
+                                <Link href={'/news'} className='hover:underline'>
+                                    Contact Us
                                 </Link>
                                 <Link href={'/news'} className='hover:underline'>
                                     Privacy Policy
@@ -50,16 +53,16 @@ const Footer = () => {
                             <span className='text-gray-500 font-semibold'>Categories</span>
                             <div className="flex flex-col font-semibold gap-2 mt-4">
                                 <Link href={'/category/technology'} className='hover:underline'>
-                                    Technology
+                                    Trending
                                 </Link>
                                 <Link href={'/category/travel'} className='hover:underline'>
-                                    Travel
+                                    Stories
                                 </Link>
                                 <Link href={'/category/sport'} className='hover:underline'>
-                                    Sport
+                                    Wold Facts
                                 </Link>
                                 <Link href={'/category/business'} className='hover:underline'>
-                                    Business
+                                    Great Personalities
                                 </Link>
                             </div>
                         </div>
