@@ -21,7 +21,7 @@ const HomeCategories = () => {
             </Link>
             <Link href={'/category/business'} className="py-3 px-5 bg-white shadow-categories hover:shadow-custom rounded-full font-bold flex justify-center items-center gap-2">
                 <Wallet color='#6044ce' />
-                <span>Business</span>
+                <span>Great Personalities</span>
             </Link>
             <Link href={'/category/management'} className="py-3 px-5 bg-white shadow-categories hover:shadow-custom rounded-full font-bold flex justify-center items-center gap-2">
                 <FileQuestion color='#e22572' />
@@ -37,7 +37,7 @@ const HomeCategories = () => {
             </Link>
             <Link href={'/news'} className="py-3 px-5 bg-white shadow-categories hover:shadow-custom rounded-full font-bold flex justify-center items-center gap-2">
                 <File color='#17aeef' />
-                <span>News</span>
+                <span>Celebrities</span>
             </Link>
         </div>
     </div>
