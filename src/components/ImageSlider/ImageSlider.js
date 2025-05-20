@@ -1,6 +1,6 @@
 "use client"
 
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import { ChevronLeft, ChevronRight } from "lucide-react"
 
 const images = [
@@ -69,6 +69,12 @@ export default function ImageSlider() {
         setCurrentIndex(newIndex)
     }
 
+    // auto-slide to next after 2 second
+    // useEffect(() => {
+    //     const interval = setInterval(goToNext, 3000)
+    //     return () => clearInterval(interval)
+    // }, [currentIndex])
+
     return (
         <div className="relative w-full max-w-md px-4">
             <div className="relative">
@@ -77,7 +83,7 @@ export default function ImageSlider() {
                     <div className="absolute top-4 left-0 right-0 z-10 flex justify-center">
                         <div className="h-[2px] w-full px-5 flex justify-center items-center">
                             {Array.from({ length: images.length }).map((_, i) => (
-                                <div key={i} className="h-[2px] w-full bg-white mx-[3px] opacity-80" />
+                                <div key={i} className={`h-[2px] w-full ${i === currentIndex ? 'bg-gray-500' : 'bg-white'} mx-[3px] opacity-80`} />
                             ))}
                         </div>
                     </div>

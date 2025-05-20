@@ -1,4 +1,5 @@
 import { Toaster } from "react-hot-toast";
+import { Analytics } from "@vercel/analytics/next"
 import "./globals.css";
 
 export const metadata = {
@@ -54,6 +55,7 @@ export default function RootLayout({ children }) {
       <body className="text-primary-text bg-primary-bg" suppressHydrationWarning>
         <Toaster />
         {children}
+        <Analytics />
       </body>
     </html>
   );
