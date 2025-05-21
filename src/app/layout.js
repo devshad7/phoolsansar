@@ -1,6 +1,7 @@
 import { Toaster } from "react-hot-toast";
 import { Analytics } from "@vercel/analytics/next"
 import "./globals.css";
+import Script from "next/script";
 
 export const metadata = {
   title: "Phool Sansar | A World Of Blessing",
@@ -52,6 +53,15 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
+      <head>
+        {/* Google AdSense Script */}
+        <Script
+          async
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5365509659192950"
+          crossOrigin="anonymous"
+          strategy="afterInteractive"
+        />
+      </head>
       <body className="text-primary-text bg-primary-bg" suppressHydrationWarning>
         <Toaster />
         {children}
