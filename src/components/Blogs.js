@@ -25,7 +25,7 @@ const Blogs = () => {
             setPosts(entries.items);
             setLoading(false)
             console.log(entries.items);
-            
+
         } catch (error) {
             setError('Error fetching posts.');
             console.error("Error fetching entries:", error);
@@ -89,10 +89,12 @@ const Blogs = () => {
                         </div>
                         {posts.length >= 4 ? (
                             <div className="flex w-full mt-10">
-                                <Button className='customBtn flex items-center justify-center gap-2'>
-                                    View all blogs
-                                    <ChevronRight />
-                                </Button>
+                                <Link href={'/blog'}>
+                                    <Button className='customBtn flex items-center justify-center gap-2'>
+                                        View all blogs
+                                        <ChevronRight />
+                                    </Button>
+                                </Link>
                             </div>
                         ) : (
                             <span>No Post Found</span>
