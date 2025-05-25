@@ -74,9 +74,15 @@ export default function RootLayout({ children }) {
             gtag('config', 'G-14TPZRN1H9');
           `}
         </Script>
+        <Script
+          async
+          data-cfasync="false"
+          src="//pl26743197.profitableratecpm.com/b1499e341e56d3cb08173612ec10aecd/invoke.js"
+        />
       </head>
       <body className="text-primary-text bg-primary-bg" suppressHydrationWarning>
         <Toaster />
+        <div id="container-b1499e341e56d3cb08173612ec10aecd"></div>
         {children}
         <Analytics />
       </body>
