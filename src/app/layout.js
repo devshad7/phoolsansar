@@ -82,8 +82,8 @@ export default function RootLayout({ children }) {
       </head>
       <body className="text-primary-text bg-primary-bg" suppressHydrationWarning>
         <Toaster />
-        <div id="container-b1499e341e56d3cb08173612ec10aecd"></div>
         {children}
+        <div id="container-b1499e341e56d3cb08173612ec10aecd"></div>
         <Analytics />
       </body>
     </html>
